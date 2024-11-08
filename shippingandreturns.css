@@ -1,0 +1,90 @@
+.shipping-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .shipping-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Grid layout for 4 items per row */
+  .shipping-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* Styling for each item card in the grid */
+  .shipping-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Ensures image won't overflow */
+  }
+  
+  .shipping-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Strictly constrain image dimensions */
+  .shipping-item img {
+    width: 100%;
+    max-width: 300px; /* Limits the width */
+    height: 300px; /* Enforces exact height */
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .shipping-item h4 {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .shipping-item p {
+    font-size: 16px;
+    color: #777;
+    margin: 8px 0;
+  }
+  
+  .shipping-item .shipping-price {
+    font-size: 16px;
+    color: #444;
+    font-weight: bold;
+  }
+  
+  /* Responsive grid adjustments */
+  @media (max-width: 1200px) {
+    .shipping-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .shipping-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .shipping-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

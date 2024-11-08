@@ -1,0 +1,171 @@
+
+.navbar {
+    background-color: rgba(59, 30, 84, 0.4) !important; /* Transparent background shade */
+    backdrop-filter: blur(10px); /* Glass effect with blur */
+    padding: 10px;
+    position: fixed; /* Make the navbar fixed at the top */
+    top: 0; /* Stick it to the top of the page */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it is above other content */
+    width: 100%; /* Full width */
+    border: 2px solid #3B1E54; /* Border color */
+    border-radius: 15px; /* Border radius for rounded corners */
+  }
+  
+  .abt{
+  color: cadetblue !important;
+  text-align: center;
+  justify-content: center;
+  font-size: 40px !important;
+  }
+  
+  /* Navbar brand (store name) styling */
+  .navbar-brand {
+    font-family: 'Pacifico', cursive; /* Apply cursive font */
+    font-size: 40px; /* Slightly increase the size */
+    font-weight: lighter;
+    color: #FFF8E3 !important; /* Change the text color of Thrift Heaven */
+  }
+  
+  /* Navbar links styling */
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-item .nav-link {
+    margin-right: 20px;
+    font-size: 16px;
+    color: #EEEEEE; /* Text color for links */
+  }
+  
+  .nav-item .nav-link:hover {
+    color: #F7E7DC;
+  }
+  
+  /* Cart icon styling */
+  .navbar .fa-shopping-cart {
+    margin-right: 5px;
+    color: #F7E7DC; /* Cart icon color */
+  }
+  
+  /* 
+  .navbar {
+    background-color: rgba(59, 30, 84, 0.4) !important;
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    border: 2px solid #3B1E54;
+    border-radius: 15px;
+  }
+  
+  .abt {
+    color: cadetblue;
+    text-align: center;
+    justify-content: center;
+    font-size: 40px !important;
+  } */
+  
+  /* .navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    font-weight: lighter;
+    color: #FFF8E3 !important;
+  } */
+  
+  .navbar-brand {
+    font-family: 'Pacifico', cursive; /* Apply cursive font */
+    font-size: 40px; /* Slightly increase the size */
+    font-weight: lighter;
+    color: #FFF8E3 !important; /* Change the text color of Thrift Heaven */
+  }
+  
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-item .nav-link {
+    margin-right: 20px;
+    font-size: 16px;
+    color: #FFF8E3; /* Updated color for better visibility */
+  }
+  
+  /* .nav-item .nav-link:hover {
+    color: #F7E7DC;
+  }
+  
+  .navbar .fa-shopping-cart {
+    margin-right: 5px;
+    color: #F7E7DC;
+  } */
+  
+  .nav-item .nav-link:hover {
+    color: #F7E7DC; /* Hover effect on links */
+  }
+  
+  /* Cart icon styling */
+  .navbar .fa-shopping-cart {
+    margin-right: 5px;
+    color: #F7E7DC; /* Cart icon color */
+  }
+  
+  .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  /* 
+  .dropdown-menu {
+    margin-top: 0;
+    background-color: rgba(59, 30, 84, 0.8);
+  }
+  
+  .dropdown-item {
+    font-size: 16px;
+    color: #FFD700;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #405D72 !important;
+    color: #F7E7DC !important;
+  } */
+  
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu {
+    margin-top: 0;  /* Remove the gap between the dropdown and the button */
+    background-color: rgba(59, 30, 84, 0.8); /* Match navbar background with slight opacity */
+  }
+  
+  /* Dropdown items styling */
+  .dropdown-item {
+    font-size: 16px;
+    color: #EEEEEE; /* Text color for dropdown items */
+  }
+  .dropdown-item:hover {
+    background-color: #405D72 !important; /* Background color on hover for dropdown items */
+    color: #F7E7DC !important; /* Font color on hover for dropdown items */
+  }
+  
+  body {
+    padding-top: 60px;
+  }
+  
+  html, body {
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+  }

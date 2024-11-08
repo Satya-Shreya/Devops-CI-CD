@@ -1,0 +1,101 @@
+.about-container {
+    position: relative;
+    display: flex;
+    align-items: flex-start; /* Align items to the start */
+    padding: 20px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    z-index: 1; /* Ensure images stay behind the text */
+    margin-right: 20px; /* Space between images and text */
+}
+
+.new-image {
+    height: 300px; /* Set height for the new image */
+    width: auto; /* Keep aspect ratio */
+    opacity: 0; /* Start hidden for fade-in effect */
+    transition: opacity 1s ease; /* Smooth transition for loading */
+}
+
+.cutting-image {
+    height: 350px; /* Increase height of the image */
+    width: auto; /* Keep width auto to maintain aspect ratio */
+    opacity: 0; /* Start hidden for fade-in effect */
+    transition: opacity 1s ease; /* Smooth transition for loading */
+    margin-top: 50px;
+    padding-top: 10px;
+    width: 400px;
+}
+
+.loaded .new-image {
+    opacity: 1; /* Fade in the new image */
+}
+
+.loaded .cutting-image {
+    opacity: 1; /* Fade in the existing image */
+}
+
+.about-content {
+    position: relative; /* Required to ensure z-index works properly */
+    z-index: 2; /* Text above the images */
+    margin-left: 20px; /* Adjust based on image width */
+    padding: 15px; /* Reduce padding for aesthetics */
+    background: rgba(18, 16, 23, 0.8); /* Semi-transparent background for readability */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    color: #fff; /* Text color */
+    max-width: 1000px; /* Set a maximum width for the content */
+    width: 90%; /* Ensure it takes 90% of its parent for responsiveness */
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+
+.about-content h2 {
+    font-size: 24px; /* Heading size */
+    margin: 0; /* Reset margin */
+}
+
+.about-content p {
+    margin-top: 10px; /* Space between heading and paragraph */
+    line-height: 1.5; /* Line height for better readability */
+    white-space: pre-wrap; /* Preserve line breaks */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+    .about-container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to start */
+    }
+
+    .image-container {
+        margin-right: 0; /* Remove margin on small screens */
+        width: 100%; /* Make image container full width */
+    }
+
+    .new-image,
+    .cutting-image {
+        width: 100%; /* Make images responsive */
+        height: auto; /* Keep aspect ratio */
+    }
+
+    .about-content {
+        margin-left: 0; /* Remove left margin */
+        padding: 10px; /* Adjust padding */
+        width: 100%; /* Full width for small screens */
+        max-width: none; /* Remove max-width for small screens */
+    }
+}
+
+@media (max-width: 420px) {
+    .new-image,
+    .cutting-image {
+        width: 100%; /* Make images full width on very small screens */
+        height: auto; /* Keep aspect ratio */
+    }
+}
+body{
+    overflow: auto;
+    background-image: url('assets/contactusbg.png');
+} 

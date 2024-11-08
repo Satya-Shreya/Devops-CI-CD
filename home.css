@@ -1,0 +1,75 @@
+/* style.css */
+.home-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.hm {
+    color: #C72C41 !important;
+    font-family: cursive;
+}
+
+h5 {
+    text-align: center;
+    justify-content: center;
+    color: #4A4A4A;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 25px !important;
+}
+
+.di {
+    text-align: center;
+    justify-content: center;
+    color: #005F73;
+    font-size: 20px !important;
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+}
+
+.image-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.image-card {
+    flex: 1;
+    margin: 0 10px;
+    position: relative;
+}
+
+.image-zoom {
+    width: 100%;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+
+.image-zoom:hover {
+    transform: scale(1.1);
+}
+
+.image-info {
+    margin-top: 10px;
+    text-align: left;
+}
+
+body {
+    background-image: url('assets/homebg.png') !important;
+}
+
+.circle-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover .circle-image {
+    transform: scale(1.1);
+}
+
+.best-sellers-title {
+    text-align: center;
+    margin-top: 30px;
+}

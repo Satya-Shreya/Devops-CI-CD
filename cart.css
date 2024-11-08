@@ -1,0 +1,227 @@
+.cart-container {
+    padding: 20px;
+  }
+  
+  .cart-items-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px; /* Gap between items */
+  }
+  .grid-container{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Set exactly 4 columns */
+    gap: 20px;
+    justify-content: center;
+   
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .cart-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    height: 300px;
+    width: 200px;
+  }
+  .text{
+    color: cadetblue;
+    font-size: 20px;
+    font-style: italic;
+
+  }
+  .head{
+    /* margin-left: 650px; */
+    text-align: center;
+    justify-content: center;
+    font-family: cursive;
+    color: lightcoral;
+  }
+  .itm-name{
+    color: crimson;
+    font-size: 22px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .linkn{
+    margin-left: 650px;
+  }
+  
+body {
+  background-image: url('assets/contactusbg.png') ;
+
+}
+.chbtn{
+  padding: 15px 15px 15px 15px;
+  background-color:#944E63;
+  color: burlywood;
+  margin-left: 650px;
+  border-radius: 10px;
+  font-family: fantasy;
+
+
+}
+  .cart-item-image {
+    width: 100%;
+    height: 300px;
+  }
+  
+  .checkout-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .checkout-popup {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .checkout-popup input {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+  }
+  
+  body{
+    overflow: auto;
+  }
+
+  .checkout-popup {
+    width: 400px; /* Increase width */
+    padding: 20px; /* Add padding */
+    background-color: #fff; /* Background color */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    position: fixed; /* Position it in the center */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensure it's on top */
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 15px; /* Increase gap between buttons */
+    margin-top: 20px; /* Margin above the button container */
+  }
+  
+  .btn {
+    padding: 10px 15px; /* Button padding */
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded edges */
+    cursor: pointer; /* Pointer on hover */
+  }
+  
+  .btn:hover {
+    background-color: #0056b3; /* Darker on hover */
+  }
+.emp{
+    text-align: center;
+    justify-content: center;
+    font-family: cursive;
+    font-style: italic;
+    color: #40534C;
+    font-size: 20px;
+}
+  .pro{
+    background-color: #944E63;
+    color: honeydew !important;
+    border-radius: 5px;
+    margin-right: 160px;
+    width: 130px;
+  }
+.msg{
+    color: #643843;
+    font-size: 40px;
+    font-family: cursive;
+    font-style:italic;
+    text-align: center;
+    justify-content: center;
+}
+  .pro:hover{
+    background-color: #CDFADB;
+    color: #643843 !important;
+  }
+  .checkbtn{
+    width: 110px;
+    border-radius: 10px;
+    background-color: cadetblue;
+    color: antiquewhite;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    
+  }
+  .crt{
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .checkbtn:hover{
+    background-color: #D4BEE4;
+    color: black;
+  }
+  .totcost{
+    font-family: cursive;
+    color: rgb(60, 164, 209);
+  }
+  
+
+  .cart-item-details {
+    flex-grow: 1;
+  }
+  
+  .delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 10; /* Ensures visibility */
+  }
+  
+  .delete-btn:hover {
+    background-color: #ff1a1a;
+  }
+
+
+
+
+
+  /* cart.css */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 80%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
