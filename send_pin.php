@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $mail->Port = 587;
 
             // Set email sender and recipient
-            $mail->setFrom('gbodhinisatyashreya@gmail.com', 'Thrift Heaven');
+            $mail->setFrom('mail', 'Thrift Heaven');
             $mail->addAddress($email);
 
             $mail->isHTML(true);
