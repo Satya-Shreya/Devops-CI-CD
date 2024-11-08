@@ -17,15 +17,15 @@ $mail = new PHPMailer;
 $mail->isSMTP();
 $mail->Host = 'smtp.gmail.com'; // Replace with your SMTP server
 $mail->SMTPAuth = true;
-$mail->Username = 'gbodhinisatyashreya@gmail.com'; // Replace with your email
-$mail->Password = 'fyhl mfbf wbtb unzv';           // Replace with your email password or app-specific password
+$mail->Username = 'mail'; // Replace with your email
+$mail->Password = 'password';           // Replace with your email password or app-specific password
 $mail->SMTPSecure = 'tls';                   // Use 'tls' or 'ssl' based on your SMTP provider
 $mail->Port = 587;                           // Common port for 'tls' is 587, for 'ssl' is 465
 
 // Email content
-$mail->setFrom('gbodhinisatyashreya@gmail.com', 'Thrift store'); // Replace with your email and name
+$mail->setFrom('mail', 'Thrift store'); // Replace with your email and name
 $mail->addAddress($email); // Recipient's email
-$mail->addReplyTo('gbodhinisatyashreya@gmail.com', 'Shreya'); // Replace with your email
+$mail->addReplyTo('mail', 'name'); // Replace with your email
 
 $mail->Subject = "Order Confirmation - Your Order Has Been Shipped";
 $mail->Body = "Thank you for your order! Your items have been shipped to:\n\n$address";
