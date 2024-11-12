@@ -13,7 +13,7 @@
 <?php include 'navbar.php'; ?>
   <div class="about-container">
     <div class="image-container">
-      <img src="assets/aboutus.png" alt="New Item" class="new-image" onload="handleImageLoad(this)">
+      <img src="assets/aboutus.png" alt="New Item" class="new-image" onload="handleImageLoad(this)" height="200px" width="400px">
       <img src="assets/dress1.jpg" alt="Thrift Store" class="cutting-image" onload="handleImageLoad(this)">
     </div>
     <div class="about-content">

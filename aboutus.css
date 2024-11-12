@@ -7,6 +7,7 @@
 
 .image-container {
     display: flex;
+    background-image: url('assets/dress1.jpg');
     flex-direction: column; /* Stack images vertically */
     z-index: 1; /* Ensure images stay behind the text */
     margin-right: 20px; /* Space between images and text */
@@ -97,5 +98,5 @@
 }
 body{
     overflow: auto;
-    background-image: url('assets/contactusbg.png');
+    /* background-image: url('assets/contactusbg.png'); */
 } 

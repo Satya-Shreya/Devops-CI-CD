@@ -54,7 +54,8 @@ h5 {
 }
 
 body {
-    background-image: url('assets/homebg.png') !important;
+    /* background-image: url('assets/homebg.png') !important; */
+    
 }
 
 .circle-image {

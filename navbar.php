@@ -44,7 +44,7 @@
         <li class="nav-item">
           <a class="nav-link" href="cart.php">
             <i class="fas fa-shopping-cart"></i>
-            <span id="cart-count" class="badge"><?php echo isset($_SESSION['cart_count']) ? htmlspecialchars($_SESSION['cart_count']) : 0; ?></span>
+            <span id="cart-count" class="badge"></span>
           </a>
         </li>
       </ul>

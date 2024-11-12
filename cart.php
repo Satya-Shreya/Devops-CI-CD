@@ -31,9 +31,9 @@ $cartItems = getCartItems($userId);
                 <div class="cart-item" data-price="<?php echo htmlspecialchars($item['price']); ?>" data-quantity="<?php echo htmlspecialchars($item['quantity']); ?>">
                     <img src="uploads/<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['name']); ?>" width="100" height="200px"><br>
               <div class="itm-name">      <strong><?php echo htmlspecialchars($item['name']); ?></strong><br></div>
-               <div class="text">  Price: $<?php echo htmlspecialchars($item['price']); ?><br>
+               <div class="text">  Price: ₹<?php echo htmlspecialchars($item['price']); ?><br>
                     Quantity: <?php echo htmlspecialchars($item['quantity']); ?><br>
-                    Total: $<?php echo htmlspecialchars($item['price'] * $item['quantity']); ?> </div>
+                    Total: ₹<?php echo htmlspecialchars($item['price'] * $item['quantity']); ?> </div>
                 </div>
             <?php endforeach; ?>
         </div>
@@ -44,8 +44,8 @@ $cartItems = getCartItems($userId);
         <!-- Checkout Popup with Address and Email -->
         <div id="checkoutPopup" class="popup-overlay" style="display: none;">
             <div class="popup-content">
-                <h2>Checkout</h2>
-                <p>Total Amount: $<span id="totalAmount"></span></p>
+                <h2 class="checkouthead">Checkout</h2>
+                <p>Total Amount: ₹<span id="totalAmount"></span></p>
                 
                 <!-- Address Input -->
                 <label for="address">Enter your address:</label>
@@ -55,8 +55,8 @@ $cartItems = getCartItems($userId);
                 <label for="email">Enter your email:</label>
                 <input type="email" id="email" placeholder="Enter your email here" required>
                 
-                <button onclick="proceedToShipping()">Continue</button>
-                <button onclick="closeCheckoutPopup()">Cancel</button>
+                <button onclick="proceedToShipping()" class="chkbtn">Continue</button>
+                <button onclick="closeCheckoutPopup()" class="chkbtn">Cancel</button>
             </div>
         </div>
     <?php endif; ?>

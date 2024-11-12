@@ -10,7 +10,10 @@
     padding: 20px;
     border-radius: 10px;
   }
-  
+  #submitButton{
+    border-radius: 2px;
+    color:#6A9C89 ;
+  }
   h2{
     color: #6A9C89 !important;
     font-style: italic;
@@ -68,7 +71,12 @@
     background-color: #F6EACB;
     color: white;
   }
-  
+  .btnsub{
+    color: #6A9C89;
+    border-radius: 5px;
+    border: solid 2px black;
+    background-color: #6A9C89 !important;
+  }
   h2{
     color: #AF1740 !important;
   }

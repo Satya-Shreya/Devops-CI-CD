@@ -48,7 +48,7 @@
   }
   
 body {
-  background-image: url('assets/contactusbg.png') ;
+  /* background-image: url('assets/contactusbg.png') ; */
 
 }
 .chbtn{
@@ -77,13 +77,20 @@ body {
     justify-content: center;
     align-items: center;
   }
-  
+  .checkouthead{
+    text-align: center;
+    justify-content: center;
+    color: #944E63;
+    font-family: cursive;
+  }
   .checkout-popup {
     background: white;
     padding: 20px;
     border-radius: 8px;
     width: 300px;
     text-align: center;
+    text-align: center;
+    justify-content: center;
   }
   
   .checkout-popup input {
@@ -123,6 +130,12 @@ body {
     border: none; /* No border */
     border-radius: 5px; /* Rounded edges */
     cursor: pointer; /* Pointer on hover */
+  }
+  .chkbtn{
+    background-color:aquamarine;
+    margin-left: 40px;
+    border-radius: 5px;
+    margin-top: 10px;
   }
   
   .btn:hover {
