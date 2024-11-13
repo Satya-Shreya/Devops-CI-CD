@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="email" name="email" placeholder="Email" class="input" required value="<?php echo htmlspecialchars($formData['email']); ?>"><br><br>
         <input type="password" name="password" placeholder="Password" class="input" required autocomplete="new-password"><br><br>
         <input type="password" name="confirmPassword" placeholder="Confirm Password" class="input" required autocomplete="new-password"><br><br>
-        <button type="submit" id="submitButton" class="btnsub">Submit</button>
+        <button type="submit" id="submitButton" class="btnsub" style="color: 'black'">Submit</button>
     </form>
 
  
