@@ -16,16 +16,16 @@ $mail = new PHPMailer;
 $mail->isSMTP();
 $mail->Host = 'smtp.gmail.com'; 
 $mail->SMTPAuth = true;
-$mail->Username = 'gbodhinisatyashreya@gmail.com'; 
-$mail->Password = 'pnxu bcir rsxn ocgk';           
+$mail->Username = 'email'; 
+$mail->Password = 'paasowrd';           
 $mail->SMTPSecure = 'tls';                  
 $mail->Port = 587;                          
 
 
 // Email content
-$mail->setFrom('gbodhinisatyashreya@gmail.com', 'Thrift store'); // Replace with your email and name
+$mail->setFrom('email', 'Thrift store'); // Replace with your email and name
 $mail->addAddress($email); // Recipient's email
-$mail->addReplyTo('gbodhinisatyashreya@gmail.com', 'Shreya'); // Replace with your email
+$mail->addReplyTo('email', 'Shreya'); // Replace with your email
 
 $mail->Subject = "Order Confirmation - Your Order Has Been Shipped";
 $mail->Body = "Thank you for your order! Your items have been shipped to:\n\n$address";
