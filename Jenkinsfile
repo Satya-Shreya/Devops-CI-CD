@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-repo/your-project.git'  // Replace with your GitHub repo URL
+                git 'https://github.com/Satya-Shreya/Devops-CI-CD'  // Replace with your GitHub repo URL
             }
         }
 
