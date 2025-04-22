@@ -2,45 +2,60 @@ pipeline {
     agent any
 
     environment {
-        COMPOSE_PROJECT_NAME = "thrift_store"
+        DOCKER_COMPOSE = '/usr/local/bin/docker-compose'
     }
 
     stages {
-        stage('Clone Repository') {
+        stage('Checkout') {
             steps {
-                echo "Cloning repo..."
-                // If your job already clones repo, skip this
-                checkout scm
+                git 'https://github.com/your-repo/your-project.git'  // Replace with your GitHub repo URL
             }
         }
 
-        stage('Build Docker Images') {
+        stage('Build Docker Image') {
             steps {
-                echo "Building Docker containers..."
-                sh 'docker-compose -f docker-compose.yml build'
+                script {
+                    sh '''
+                    docker-compose -f docker-compose.yaml build
+                    '''
+                }
             }
         }
 
         stage('Run Containers') {
             steps {
-                echo "Running containers with Docker Compose..."
-                sh 'docker-compose -f docker-compose.yml up -d'
+                script {
+                    sh '''
+                    docker-compose -f docker-compose.yaml up -d
+                    '''
+                }
             }
         }
 
         stage('Health Check') {
             steps {
-                echo "Checking container status..."
-                sh 'docker ps'
+                script {
+                    sh '''
+                    docker-compose -f docker-compose.yaml ps
+                    '''
+                }
             }
         }
 
-        stage('Teardown (Optional)') {
+        stage('Teardown') {
             steps {
-                echo "Tearing down Docker containers..."
-                // Uncomment if you want to shut containers after build
-                // sh 'docker-compose down'
+                script {
+                    sh '''
+                    docker-compose -f docker-compose.yaml down
+                    '''
+                }
             }
+        }
+    }
+
+    post {
+        always {
+            cleanWs()
         }
     }
 }
