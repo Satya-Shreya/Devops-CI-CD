@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                    docker-compose -f docker-compose.yaml build
+                    docker-compose -f docker-compose.yml build
                     '''
                 }
             }
@@ -26,7 +26,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                    docker-compose -f docker-compose.yaml up -d
+                    docker-compose -f docker-compose.yml up -d
                     '''
                 }
             }
@@ -36,7 +36,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                    docker-compose -f docker-compose.yaml ps
+                    docker-compose -f docker-compose.yml ps
                     '''
                 }
             }
@@ -46,7 +46,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                    docker-compose -f docker-compose.yaml down
+                    docker-compose -f docker-compose.yml down
                     '''
                 }
             }
