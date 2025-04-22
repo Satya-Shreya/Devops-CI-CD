@@ -1,61 +1,32 @@
 pipeline {
     agent any
 
-    environment {
-        DOCKER_COMPOSE = '/usr/local/bin/docker-compose'
-    }
-
     stages {
-        stage('Checkout') {
+        stage('Clone Repository') {
             steps {
-                git 'https://github.com/Satya-Shreya/Devops-CI-CD'  // Replace with your GitHub repo URL
+                // Cloning from the master branch of your GitHub repository
+                git branch: 'master', url: 'https://github.com/Satya-Shreya/Devops-CI-CD.git'
             }
         }
 
-        stage('Build Docker Image') {
+        stage('Deploy') {
             steps {
-                script {
-                    sh '''
-                    docker-compose -f docker-compose.yml build
-                    '''
-                }
-            }
-        }
+                echo 'Repository cloned successfully.'
+                // Customize the deployment step based on your hosting method
+                // If deploying to a static website or server, you could use commands like:
+                
+                // Example: Deploy to a web server (Apache/Nginx)
+                // sh 'scp -r * user@server:/path/to/web/directory'
 
-        stage('Run Containers') {
-            steps {
-                script {
-                    sh '''
-                    docker-compose -f docker-compose.yml up -d
-                    '''
-                }
-            }
-        }
+                // If you're using a build tool or script, add those commands:
+                // For example, running a deploy script like:
+                // sh 'npm run deploy'
 
-        stage('Health Check') {
-            steps {
-                script {
-                    sh '''
-                    docker-compose -f docker-compose.yml ps
-                    '''
-                }
-            }
-        }
+                // Example if you are deploying to a GitHub Pages branch:
+                // sh 'git push origin gh-pages'
 
-        stage('Teardown') {
-            steps {
-                script {
-                    sh '''
-                    docker-compose -f docker-compose.yml down
-                    '''
-                }
+                echo 'Deployment step goes here.'
             }
-        }
-    }
-
-    post {
-        always {
-            cleanWs()
         }
     }
 }
