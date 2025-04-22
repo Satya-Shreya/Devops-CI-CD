@@ -1,11 +1,13 @@
+<?php session_start(); include 'navbar.php'; ?>
 <?php
 
-$host = 'localhost';
+$host = 'mysql';
 $db = 'thrift_store';
-$user = 'root';
-$pass = ''; 
+$port = 3306;
+$user = 'Shreya';
+$pass = 'Shreya'; 
 
-$conn = new mysqli($host, $user, $pass, $db);
+$conn = new mysqli($host, $user, $pass, $db, $port);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -77,7 +79,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="signup.css">
 </head>
 <body>
-<?php session_start(); include 'navbar.php'; ?>
 <div class="signup-container">
     <h2>Sign Up</h2>
     <form id="signup-form" method="POST"> 

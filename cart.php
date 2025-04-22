@@ -1,6 +1,6 @@
-<!-- cart.php -->
+<?php session_start();?>
 <?php
-session_start();
+
 include 'db_connect.php';
 include 'cart_functions.php';
 

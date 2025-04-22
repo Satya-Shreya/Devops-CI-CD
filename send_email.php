@@ -1,7 +1,9 @@
 <?php
 session_start();
-include 'db_connect.php';
-require 'phpmailer_smtp\smtp\PHPMailerAutoload.php'; // Ensure the path to PHPMailer is correct
+require_once __DIR__ . '/vendor/autoload.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 $data = json_decode(file_get_contents("php://input"), true);
 $address = $data['address'] ?? '';
@@ -12,38 +14,33 @@ if (empty($address) || empty($email)) {
     exit();
 }
 
-$mail = new PHPMailer;
-$mail->isSMTP();
-$mail->Host = 'smtp.gmail.com'; 
-$mail->SMTPAuth = true;
-$mail->Username = 'email'; 
-$mail->Password = 'paasowrd';           
-$mail->SMTPSecure = 'tls';                  
-$mail->Port = 587;                          
+$mail = new PHPMailer(true);
 
+try {
+    $mail->SMTPDebug = 2; // Debug output
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'gbodhinisatyashreya@gmail.com';
+    $mail->Password = 'azehb azig keao acah'; // App password
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = 587;
 
-// Email content
-$mail->setFrom('email', 'Thrift store'); // Replace with your email and name
-$mail->addAddress($email); // Recipient's email
-$mail->addReplyTo('email', 'Shreya'); // Replace with your email
+    $mail->setFrom('gbodhinisatyashreya@gmail.com', 'Thrift store');
+    $mail->addAddress($email);
+    $mail->addReplyTo('gbodhinisatyashreya@gmail.com', 'Shreya');
 
-$mail->Subject = "Order Confirmation - Your Order Has Been Shipped";
-$mail->Body = "Thank you for your order! Your items have been shipped to:\n\n$address";
-$mail->isHTML(false); // Set to true if using HTML in email body
+    $mail->isHTML(false);
+    $mail->Subject = "Order Confirmation - Your Order Has Been Shipped";
+    $mail->Body = "Thank you for your order! Your items have been shipped to:\n\n$address";
 
-// Attempt to send the email
-if ($mail->send()) {
+    $mail->send();
     echo json_encode(['success' => true]);
-} else {
-    echo json_encode(['success' => false, 'message' => 'Failed to send email: ' . $mail->ErrorInfo]);
+
+} catch (Exception $e) {
+    error_log('Mailer Error: ' . $mail->ErrorInfo); // Log to Apache error log
+    echo json_encode(['success' => false, 'message' => 'Mailer Error: ' . $mail->ErrorInfo]);
 }
-
-
-
-
-
-
-
 
 
 

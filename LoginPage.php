@@ -1,16 +1,16 @@
-
 <?php
 session_start(); // Start the session at the top of the file
 
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Database connection settings
-    $host = 'localhost';
+    $host = 'mysql';
     $db = 'thrift_store';
-    $user = 'root';
-    $pass = ''; // Empty password for root
+    $user = 'Shreya';
+    $port = 3306; // Port number for MySQL, if needed //3307 for mysql
+    $pass = 'Shreya'; // Empty password for root
 
-    $conn = new mysqli($host, $user, $pass, $db);
+    $conn = new mysqli($host, $user, $pass, $db, $port);
 
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
@@ -75,6 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </div>
   <div class="login-content">
     <form method="POST" action="">
+
       <img src="assets/avatar.svg" alt="Avatar">
       <h2 class="title">Welcome</h2>
 
@@ -107,8 +108,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </form>
   </div>
 </div>
-
-
 
 <div id="forgot-password-modal" style="display: none;">
     <div class="modal-content">
